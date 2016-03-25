@@ -16,7 +16,7 @@ sap.ui.jsview("testappingit.ramesh", {
  		return new sap.m.Page({
 			title: "Title",
 			content: [
-			
+			new sap.m.Button({text:"Ramesh"})
 			]
 		});
 	}
