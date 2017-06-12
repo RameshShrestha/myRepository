@@ -1,0 +1,136 @@
+{ "testTiles" : [
+		 	{"Type":"Safety", "currentValue":"3","currentValUnit":"","currentText":"TCIR","TargetValue":"5","ytdValue":"4" , "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Safety", "currentValue":"84","currentValUnit":"","currentText":"SMP 2.0","TargetValue":"85","ytdValue":"99", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"People", "currentValue":"75","currentValUnit":"%","currentText":"MCMW AP","TargetValue":"70","ytdValue":"65", "url":"google.com","paType":"Brewing","subtype":"Wort Cooling"},
+		 	{"Type":"People", "currentValue":"22","currentValUnit":"%","currentText":"Training Plant: AP","TargetValue":"12","ytdValue":"44", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"People", "currentValue":"57","currentValUnit":"%","currentText":"Employement Engagement AP","TargetValue":"43","ytdValue":"74", "url":"google.com","paType":"Brewing","subtype":"Wort Cooling"},
+		 	{"Type":"Quality", "currentValue":"55.2","currentValUnit":"","currentText":"Consumer Complaints (100k shipped bbls)","TargetValue":"10","ytdValue":"66.3", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Quality", "currentValue":"85","currentValUnit":"","currentText":"Brewery Hygiene Score","TargetValue":"85","ytdValue":"85", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Quality", "currentValue":"100","currentValUnit":"","currentText":"Brewery Quality Index(BQI)","TargetValue":"100","ytdValue":"100", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Service", "currentValue":"77","currentValUnit":"%","currentText":"Machine Efficiency (ME)","TargetValue":"90","ytdValue":"60", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Service", "currentValue":"80","currentValUnit":"%","currentText":"OEE","TargetValue":"85","ytdValue":"80", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Service", "currentValue":"66","currentValUnit":"%","currentText":"Run to Schedule Daily","TargetValue":"56","ytdValue":"90", "url":"google.com","paType":"Brewing","subtype":"Fermentation"},
+		 	{"Type":"Cost", "currentValue":"56435.44","currentValUnit":"$","currentText":"Total Cost / bbl","TargetValue":"50000","ytdValue":"1805550", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Cost", "currentValue":"6225","currentValUnit":"","currentText":"Bbls/ Total Labor Hour Worked","TargetValue":"5000","ytdValue":"20000", "url":"google.com","paType":"Brewing","subtype":"Fermentation"},
+		 	{"Type":"Cost", "currentValue":"90394","currentValUnit":"$","currentText":"Maintenence Mat. Cost / bbl","TargetValue":"30000","ytdValue":"18000", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Cost", "currentValue":"5.58","currentValUnit":"$","currentText":"Waste / bbl","TargetValue":"3.42","ytdValue":"2.26", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Cost", "currentValue":"3.24","currentValUnit":"$","currentText":"Macro Extract Loss (MEL)","TargetValue":"6.23","ytdValue":"5.67", "url":"google.com","paType":"Brewing","subtype":"Maturation"},
+		 	{"Type":"Cost", "currentValue":"7.56","currentValUnit":"$","currentText":"Energy Cost /bbl","TargetValue":"8","ytdValue":"425", "url":"google.com","paType":"Brewing","subtype":"Wort Production/Brewhouse"},
+		 	{"Type":"Cost", "currentValue":"3","currentValUnit":"","currentText":"TCIR","TargetValue":"5","ytdValue":"4", "url":"google.com","paType":"Brewing","subtype":"Maturation"},
+		 	{"Type":"Other", "currentValue":"3","currentValUnit":"","currentText":"TCIR","TargetValue":"5","ytdValue":"4", "url":"google.com","paType":"Brewing","subtype":"Maturation"}
+ 			],
+  "testData": [
+    {
+        "Date": "8/1/2012", 
+        "Revenue": "16266", 
+        "Count": "52" 
+    },
+    {
+        "Date": "8/2/2012", 
+        "Revenue": "1841608", 
+        "Count": "12" 
+    },
+    {
+        "Date": "8/3/2012", 
+        "Revenue": "1713023", 
+        "Count": "98" 
+    },
+    {
+        "Date": "8/4/2012", 
+        "Revenue": "1892527", 
+        "Count": "82" 
+    },
+   
+    {
+        "Date": "6/15/2013", 
+        "Revenue": "3639028", 
+        "Count": 62 
+    },
+    {
+        "Date": "6/16/2013", 
+        "Revenue": "3659304", 
+        "Count": "70" 
+    },
+    {
+        "Date": "6/17/2013", 
+        "Revenue": "3698389", 
+        "Count": "57" 
+    },
+    {
+        "Date": "6/18/2013", 
+        "Revenue": 3783396.39, 
+        "Count": "83" 
+    },
+    {
+        "Date": "6/19/2013", 
+        "Revenue": "3722990", 
+        "Count": "75" 
+    },
+    {
+        "Date": "6/20/2013", 
+        "Revenue": "3617619", 
+        "Count": "76" 
+    },
+    {
+        "Date": "6/21/2013", 
+        "Revenue": "367569", 
+        "Count": "55" 
+    },
+   
+    {
+        "Date": "6/28/2013", 
+        "Revenue": "380395", 
+        "Count": "04" 
+    },
+    {
+        "Date": "6/29/2013", 
+        "Revenue": "3749147.69", 
+        "Count": "23" 
+    },
+    {
+        "Date": "6/30/2013", 
+        "Revenue": "3784917.64", 
+        "Count": "38" 
+    }],
+    "Comments" :[{
+        "Date": "5/15/2017, 5:33:49 PM", 
+        "Comment": "Hellloo hei",
+        "Editable" : false
+    },
+    {
+        "Date": "5/15/2017, 5:33:49 PM", 
+        "Comment": "Test comment by Ramesh Shrestha",
+         "Editable" : false
+    },
+    {
+        "Date": "5/15/2017, 5:34:49 PM", 
+        "Comment": "SAPUI5 applicaiton development testing",
+         "Editable" : false
+    },
+    {
+        "Date": "5/15/2017, 5:35:49 PM", 
+        "Comment": "Accenture technology",
+         "Editable" : false
+    },
+     {
+        "Date": "5/15/2017, 5:35:55 PM", 
+        "Comment": "Test comment by Ramesh Shrestha",
+         "Editable" : false
+    },
+    {
+        "Date": "5/15/2017, 5:36:20 PM", 
+        "Comment": "SAPUI5 applicaiton development testing",
+         "Editable" : false
+    },
+    {
+        "Date": "5/15/2017, 5:37:11 PM", 
+        "Comment": "Accenture technology",
+         "Editable" : false
+    },
+    {
+        "Date": "5/15/2017, 5:38:32 PM", 
+        "Comment": "Testing the application comments ",
+         "Editable" : false
+       
+    }]
+}

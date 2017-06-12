@@ -1,0 +1,31 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.ramesh.miizRotateText.controller.HomeContent" xmlns:html="http://www.w3.org/1999/xhtml">
+
+					<HBox height="61px" class="homeScreenHead">
+					<Image src="./images/mcLogo.PNG" width="240px" height="60px" alt="Millercoors logo" ></Image>
+					<Text text="MII landing Page" width="350px" class="titleTop"/>
+					</HBox>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Structured Communication" 
+						press="onNavigate">
+						<tileContent>
+							<TileContent >
+							<!--	<content>
+									<NumericContent scale="M" value="1.96" valueColor="Error" indicator="Up"/>
+								</content>-->
+							</TileContent>
+						</tileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Manual Data Entry"  press="onNavigate">
+						<tileContent>
+							<TileContent >
+							<!--	<content>
+									<NumericContent scale="%" value="12" valueColor="Critical" indicator="Up"/>
+								</content>-->
+							</TileContent>
+						</tileContent>
+					</GenericTile>
+		<HBox id="testBox"></HBox>
+			<Button text="addNewTile" press="addNewTestTile"></Button>
+	
+	
+</mvc:View>

@@ -1,0 +1,83 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" class="sapUiSizeCompact">
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange354" minWidth="512" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title=""
+			labelSpanL="3" labelSpanM="3" emptySpanL="1" emptySpanM="1" columnsL="1" columnsM="1" class="editableForm sapUiSizeCompact">
+			<f:content>
+				<Label text="Level"/>
+				<Select>
+				<!--	<core:Item key="{key}" text="{text}"/>-->
+						<items>
+						<core:Item text="Level 1"/>
+						<core:Item text="Level 2"/>
+						<core:Item text="Level 3"/>
+						<core:Item text="Level 4"/>
+					</items>
+				</Select>
+				<Label text="Process Area"/>
+				<Select width="100%">
+					<items>
+						<core:Item text="Brewing"/>
+						<core:Item text="Packaging"/>
+						<core:Item text="Utility"/>
+						<core:Item text="Customer Service"/>
+					</items>
+				</Select>
+				
+				<Label text="Sub Process Area"/>
+				<Input value=""/>
+				<Label text="Target Value"/>
+				<Input value=""/>
+				<Label text="Time Frame"/>
+			<!--	<Select width="100%" id="idLevelEntry">
+					<items>
+						<core:Item text="Brewing"/>
+						<core:Item text="Packaging"/>
+						<core:Item text="Utility"/>
+						<core:Item text="Customer Service"/>
+					</items>
+				</Select>-->
+					<Select id="idTimeFrameEntry"
+											forceSelection="false"
+											selectedKey="{/0/key}"
+											items="{
+												path: '/'
+											}">
+											<core:Item key="{key}" text="{text}" />
+										</Select>
+				<Label text="Time Frame Value"/>
+				<Input value=""/>
+				<Label text="Current Value"/>
+				<Input value=""/>
+				<Select width="100%">
+					<items>
+						<core:Item text="Number" />
+						<core:Item text="Cost" />
+						<core:Item text="Percent" />
+						<core:Item text="BBL/BBL" />
+						<core:Item text="MJ/MJ" />
+					</items>
+						<layoutData>
+						<l:GridData span="L3 M3 S5" />
+					</layoutData>
+				</Select>
+				<Label text="Name"/>
+				<Input value=""/>
+				<Label text="Date"/>
+				<DatePicker	placeholder="dd/MM/yyyy" displayFormat="dd/MM/yyyy"/>
+				<!--<Label text="To"/>
+				<DatePicker	placeholder="dd/MM/yyyy" displayFormat="dd/MM/yyyy"/>
+				<Label text="Data Category"/>-->
+				<Select width="100%">
+					<items>
+						<core:Item text="Safty"/>
+						<core:Item text="People"/>
+						<core:Item text="Quality"/>
+						<core:Item text="Service"/>
+						<core:Item text="Cost"/>
+						<core:Item text="Sustainability"/>
+					</items>
+				</Select>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

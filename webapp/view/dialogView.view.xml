@@ -1,0 +1,89 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:viz="sap.viz.ui5.controls"
+	 xmlns:l="sap.ui.layout" controllerName="com.ramesh.miizRotateText.controller.dialogView"
+	xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:html="http://www.w3.org/1999/xhtml">
+	<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Bar">
+				<l:Grid defaultSpan="L12 M12 S12" class="sapUiSmallMarginTop">
+					<l:content>
+						<FlexBox>
+							<viz:VizFrame id="idBarMII" uiConfig="{applicationSet:'fiori'}" height="350px" width="800px" vizType="column">
+								<viz:dataset>
+									<viz.data:FlattenedDataset data="{/testData}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="Date" value="{Date}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Count" value="{Count}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Count"/>
+									<viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="Date"/>
+								</viz:feeds>
+							</viz:VizFrame>
+							<layoutData>
+								<l:GridData span="L12 M12 S12"/>
+							</layoutData>
+						</FlexBox>
+					</l:content>
+				</l:Grid>
+			</IconTabFilter>
+			<IconTabFilter text="Line">
+				<l:Grid defaultSpan="L12 M12 S12" class="sapUiSmallMarginTop">
+					<l:content>
+						<FlexBox>
+							<viz:VizFrame id="idLineMII" uiConfig="{applicationSet:'fiori'}" vizType="line">
+								<viz:dataset>
+									<viz.data:FlattenedDataset data="{/testData}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="Date" value="{Date}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Count" value="{Count}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem id='valueAxisFeedLine' uid="valueAxis" type="Measure" values="Count"/>
+									<viz.feeds:FeedItem id='categoryAxisFeedLine' uid="categoryAxis" type="Dimension" values="Date"/>
+								</viz:feeds>
+							</viz:VizFrame>
+							<layoutData>
+								<l:GridData span="L12 M12 S12"/>
+							</layoutData>
+						</FlexBox>
+					</l:content>
+				</l:Grid>
+			</IconTabFilter>
+			<IconTabFilter text="Comments">
+				<Table id="idCommentTable" inset="false" items="{ path: '/Comments' }">
+					<columns>
+						<Column width="12em">
+							<Text text="Date"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="false">
+							<Text text="Comment"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{Date}"/>
+								<Input placeholder="Add new comment" value="{Comment}" editable="{Editable}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				
+				<HBox>
+					<Button id="idAddCommentBtn" text="Add Comment" press="onPressAddComment"/>
+					<Button id="idUpdateCommentBtn" visible="false" text="Update" press="onPressUpdateComment" />
+					<Button id="idCancelCommentBtn" visible="false" text="Cancel" press="onPressCancelComment"/>
+					
+				</HBox>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+</mvc:View>
