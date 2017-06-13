@@ -9,6 +9,7 @@ sap.ui.define([
 					type: "String",
 					defaultValue: "0"
 				},
+				
 				actualValueText: {
 					type: "String",
 					defaultValue: "50"
