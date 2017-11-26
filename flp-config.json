@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "com.ramesh.zCURD_myCalView",
+        "description": "crud opperation with calculation view",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#zCURD_myCalView-Display",
+        "navigationComponentName": "com.ramesh",
+        "intentSemanticObject": "zCURD_myCalView",
+        "intentAction": "Display",
+        "html5ApplicationName": "zcurdmycalview",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "f70e1824-b1ed-4448-b525-2c217a3ebf02"
+        ],
+        "contentPackages": [
+            "dc9fc678-26b3-4ca0-9024-760ca26b099c"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Cacluation View",
+        "subtitle": "CURD operation",
+        "searchKeywords": "Cacluation View,CURD operation",
+        "displayIconUrl": "sap-icon://customer-and-contacts",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
