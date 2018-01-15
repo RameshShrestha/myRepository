@@ -1,0 +1,9 @@
+
+service namespace "com.ramesh" {
+   "IMAGE_STORE" as "IMAGE_STORE" 
+     create using "SYSTEM"."ImageProcessingHANA.Procedures::createImage" ;
+     }
+settings {
+    metadata cache-control "max-age= 604800";
+    
+}

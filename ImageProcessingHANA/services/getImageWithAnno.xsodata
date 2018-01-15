@@ -1,0 +1,7 @@
+service {
+"SYSTEM"."IMAGE_STORE" as "IMAGE_STORE_ANNO"
+ with ( "COUNTER","NAME","IMAGE_NAME");
+}
+annotations{
+  enable OData4SAP;
+}

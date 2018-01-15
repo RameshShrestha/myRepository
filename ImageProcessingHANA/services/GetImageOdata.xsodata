@@ -1,0 +1,4 @@
+service {
+"SYSTEM"."IMAGE_STORE" as "IMAGE_STORE";
+"SYSTEM"."zrIBM.AtributeView::testview.IMAGE_STORE_TEMP"  as "IMAGE_LIST"  keys ("Counter");
+}

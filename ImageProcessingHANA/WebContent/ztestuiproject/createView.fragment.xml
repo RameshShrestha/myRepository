@@ -1,0 +1,63 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<Dialog contentWidth="900px"
+      title="Create New ">
+   	<content>
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormCreate"
+			minWidth="512"
+			maxContainerCols="2"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			
+			emptySpanL="4"
+			emptySpanM="4"
+			columnsL="1"
+			columnsM="1"
+			class="editableForm">
+			<f:content>
+				
+				<Label text="NAME" />
+				<Input value="{createModel>/0/NAME}">
+				<layoutData>
+						<l:GridData span="L4 M4 S6" />
+					</layoutData>
+				</Input>
+				
+			
+			<Label text="IMAGE_NAME" />
+	        <u:FileUploader
+	        value="{createModel>/0/IMAGE_NAME}"
+			id="fileUploaderCreate"
+			name="myFileUpload"
+			uploadUrl= "" 
+			fileType="jpeg,jpg"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			change = "onChangeFile"/>
+			<Label text="IMAGE" />
+				<Image id="imageViewCreate" height="300px" width="300px" src="{
+							path: 'createModel>/0/IMAGE_CONTENT',
+							formatter: '.photoFormat'
+							}" alt="no Image" />
+		
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+	</content>
+	<endButton>
+			<Button
+				text="CANCEL"
+				press="onCloseDialogCreate"/>
+		</endButton>
+	<beginButton>
+			<Button
+				text="CREATE"
+				press="onCreatePress"/>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

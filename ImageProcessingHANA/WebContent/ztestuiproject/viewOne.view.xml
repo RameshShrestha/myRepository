@@ -1,0 +1,81 @@
+<core:View
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+		controllerName="ztestuiproject.viewOne"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="CURD Operation Example">
+		<content>
+			<Table
+				id="table"
+				width="auto"
+				class="sapUiResponsiveMargin"
+				items="{
+					path: '/IMAGE_STORE',
+					sorter: {
+						path: 'COUNTER',
+						descending: false
+					}
+				}"
+				noDataText="{worklistView>/tableNoDataText}"
+				busyIndicatorDelay="{worklistView>/tableBusyDelay}"
+				growing="true"
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished">
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						
+						<ToolbarSpacer />
+						<core:Icon	src="sap-icon://add" height="30px" width="30px" tooltip="Add New" color="#000000" press="addPress"/>
+						<SearchField
+							id="searchField"
+							tooltip="{i18n>worklistSearchTooltip}"
+							search="onSearch"
+							width="auto"></SearchField>
+							
+								<Button icon="sap-icon://excel-attachment" press="exportToExcel" />
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column >
+						<Text text="COUNTER"/>
+					</Column>
+					<Column >
+						<Text text="NAME" />
+					</Column>
+					<Column >
+						<Text text="IMAGE NAME" />
+					</Column>
+					<Column>
+						<Text text="IMAGE"/>
+					</Column>
+					<Column>
+						<Text text="Action"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier
+								title="{COUNTER}"/>
+							<ObjectIdentifier
+								title="{NAME}"/>
+							<ObjectIdentifier
+								title="{IMAGE_NAME}"/>
+							<Image src="{
+							path: 'IMAGE_CONTENT',
+							formatter: '.photoFormat'
+							}" alt="no Image" height="30px" width="30px" press="expandImage"/>
+							<HBox>
+								<core:Icon	src="sap-icon://edit" height="40px" width="40px" tooltip="Edit" color="#233023" press="editPress"/>
+								<core:Icon	src="sap-icon://delete" height="40px" width="40px" tooltip="Delete" color="#FF0000" press="deletePress"/>
+					        </HBox>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</core:View>

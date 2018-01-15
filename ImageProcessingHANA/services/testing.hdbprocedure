@@ -1,0 +1,14 @@
+PROCEDURE "SYSTEM"."ImageProcessingHANA.services::testing" ( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+       
+       
+   *************************************/
+   
+   select * from SYSTEM."IMAGE_STORE";
+END

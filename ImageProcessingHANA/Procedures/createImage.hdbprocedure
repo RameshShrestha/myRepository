@@ -1,0 +1,27 @@
+PROCEDURE "SYSTEM"."ImageProcessingHANA.Procedures::createImage" (
+IN im_row "SYSTEM"."IMAGE_STORE",
+OUT ex_error  String)
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER AS
+	--DEFAULT SCHEMA <default_schema_name>
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+ declare lv_imagename string;
+declare lv_imagevalue blob;
+
+select IMAGE_NAME, IMAGE_CONTENT
+     into lv_imagename, lv_imagevalue
+                      from :im_row;
+                    
+/* if :lv_imagename = '' then
+  ex_error = "Error while saving ";
+else*/
+   if :lv_imagename != ''  then                 
+   insert into "SYSTEM"."IMAGE_STORE" 
+             values ( lv_imagename,  lv_imagevalue);
+                    
+ end if; 
+  
+END;

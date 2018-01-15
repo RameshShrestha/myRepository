@@ -1,0 +1,71 @@
+<core:View
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+		controllerName="ztestuiproject.detailView"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+			<Table
+				id="table"
+				width="auto"
+				class="sapUiResponsiveMargin"
+				items="{
+					path: '/IMAGE_STORE',
+					sorter: {
+						path: 'COUNTER',
+						descending: false
+					}
+				}"
+				noDataText="{worklistView>/tableNoDataText}"
+				busyIndicatorDelay="{worklistView>/tableBusyDelay}"
+				growing="true"
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished">
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						<ToolbarSpacer />
+						<SearchField
+							id="searchField"
+							tooltip="{i18n>worklistSearchTooltip}"
+							search="onSearch"
+							width="auto"></SearchField>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column >
+						<Text text="COUNTER"/>
+					</Column>
+					<Column >
+						<Text text="NAME" />
+					</Column>
+					<Column >
+						<Text text="IMAGE NAME" />
+					</Column>
+					<Column>
+						<Text text="IMAGE"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem
+						type="Navigation"
+						press="onPress">
+						<cells>
+							<ObjectIdentifier
+								title="{COUNTER}"/>
+							<ObjectIdentifier
+								title="{NAME}"/>
+							<ObjectIdentifier
+								title="{IMAGE_NAME}"/>
+							<Image src="{
+							path: 'IMAGE_CONTENT',
+							formatter: '.photoFormat'
+							}" alt="no Image" height="50px" width="50px"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</core:View>

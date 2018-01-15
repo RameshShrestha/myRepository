@@ -1,0 +1,64 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<Dialog contentWidth="900px"
+      title="Edit ">
+   	<content>
+	<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange354"
+			minWidth="512"
+			maxContainerCols="2"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			
+			emptySpanL="4"
+			emptySpanM="4"
+			columnsL="1"
+			columnsM="1"
+			class="editableForm">
+			<f:content>
+				<Label text="COUNTER" />
+				<Text text="{jsonModel>/0/COUNTER}" />
+				<Label text="NAME" />
+				<Input value="{jsonModel>/0/NAME}">
+				<layoutData>
+						<l:GridData span="L4 M4 S6" />
+					</layoutData>
+				</Input>
+				
+				<Label text="IMAGE" />
+				<Image id="imageView" height="300px" width="300px" src="{
+							path: 'jsonModel>/0/IMAGE_CONTENT',
+							formatter: '.photoFormat'
+							}" alt="no Image" />
+			<Label text="IMAGE_NAME" />
+	        <u:FileUploader
+	        value="{jsonModel>/0/IMAGE_NAME}"
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl= "" 
+			fileType="jpeg,jpg"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			change = "onChangeFile"/>
+			<!--"/ImageProcessingHANA/services/uploadURL.xsjs" -->
+		
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+	</content>
+	<endButton>
+			<Button
+				text="CLOSE"
+				press="onCloseDialog"/>
+		</endButton>
+	<beginButton>
+			<Button
+				text="SAVE"
+				press="onSave"/>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>
